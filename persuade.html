@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>An Odyssey</h1>
+
+<h2>Roll for Persuasion</h2>
+
+
+<p id="roll"></p>
+<p id="choice"></p>
+
+<script>
+let x = Math.floor(Math.random() * 20) + 1;
+let y = Math.floor(Math.random() * 20) + 1;
+let response;
+let choice;
+
+if (y < x) {
+  response = "You rolled " + x + ". Calypso rolled " + y + ". Calypso agrees to let you take the boat for some unknown reason. And so, you set off.";
+  choice = "<a href='nextBoat.html'>Next</a>";
+} else {
+  response = "You rolled " + x + ". Calypso rolled " + y + ". Calypso tells you to stay the night instead, and you agree. You decide to wait till night time to take the boat.";
+  choice = "<a href='wait.html'>Next</a>";
+}
+
+document.getElementById("roll").innerHTML = response;
+document.getElementById("choice").innerHTML = choice;
+</script>
+
+</body>
+</html>
